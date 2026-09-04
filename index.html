@@ -1,905 +1,809 @@
 <!doctype html>
 <html lang="es" data-bs-theme="auto">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta
-      name="author"
-      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-    />
-    <meta name="generator" content="Astro v5.13.2" />
 
-    <title>FISEI</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="FISEI">
 
-    <link
-      rel="canonical"
-      href="https://getbootstrap.com/docs/5.3/examples/carousel/"
-    />
+  <title>FISEI</title>
 
-    <script src="../assets/js/color-modes.js"></script>
+  <!-- BOOTSTRAP CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
 
-    <link
-      href="../assets/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+  <!-- CSS DEL CARRUSEL -->
+  <link href="carousel.css" rel="stylesheet">
 
-    <meta name="theme-color" content="#712cf9" />
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
 
-    <link href="carousel.css" rel="stylesheet" />
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
+  </style>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+</head>
 
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: #0000001a;
-        border: solid rgba(0, 0, 0, 0.15);
-        border-width: 1px 0;
-        box-shadow:
-          inset 0 0.5em 1.5em #0000001a,
-          inset 0 0.125em 0.5em #00000026;
-      }
+<body>
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+  <!-- ========================================= -->
+  <!-- MENÚ PRINCIPAL -->
+  <!-- ========================================= -->
 
-      .bi {
-        vertical-align: -0.125em;
-        fill: currentColor;
-      }
+  <header data-bs-theme="dark">
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
+      <div class="container-fluid">
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
+        <!-- NOMBRE -->
+        <a class="navbar-brand" href="#">
+          FISEI
+        </a>
 
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
+        <!-- BOTÓN PARA PANTALLAS PEQUEÑAS -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Mostrar navegación"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      .bd-mode-toggle .bi {
-        width: 1em;
-        height: 1em;
-      }
+        <div
+          class="collapse navbar-collapse"
+          id="navbarCollapse"
+        >
 
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
-    </style>
-  </head>
+          <!-- OPCIONES DEL MENÚ -->
 
-  <body>
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
 
-    <!-- ICONOS PARA CAMBIO DE TEMA -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+            <!-- INICIO -->
+            <li class="nav-item">
 
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path
-          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
-        ></path>
-      </symbol>
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+              >
+                Inicio
+              </a>
 
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path
-          d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
-        ></path>
-      </symbol>
+            </li>
 
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path
-          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
-        ></path>
-      </symbol>
+            <!-- CARRERAS -->
+            <li class="nav-item">
 
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path
-          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
-        ></path>
-      </symbol>
+              <a
+                class="nav-link"
+                href="#"
+              >
+                Carreras
+              </a>
 
-    </svg>
+            </li>
+
+            <!-- DOCENTES -->
+            <li class="nav-item">
+
+              <a
+                class="nav-link"
+                href="#"
+              >
+                Docentes
+              </a>
+
+            </li>
+
+            <!-- SERVICIOS -->
+            <li class="nav-item">
+
+              <a
+                class="nav-link"
+                href="#"
+              >
+                Servicios
+              </a>
+
+            </li>
+
+          </ul>
+
+          <!-- BUSCADOR -->
+
+          <form
+            class="d-flex"
+            role="search"
+          >
+
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar"
+              aria-label="Buscar"
+            >
+
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+            >
+              Buscar
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
 
 
-    <!-- CAMBIO DE TEMA -->
+  <!-- ========================================= -->
+  <!-- CARRUSEL -->
+  <!-- ========================================= -->
+
+  <main>
+
     <div
-      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
+      id="myCarousel"
+      class="carousel slide mb-6"
+      data-bs-ride="carousel"
     >
 
-      <button
-        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-        id="bd-theme"
-        type="button"
-        aria-expanded="false"
-        data-bs-toggle="dropdown"
-        aria-label="Cambiar tema"
-      >
-        <svg class="bi my-1 theme-icon-active" aria-hidden="true">
-          <use href="#circle-half"></use>
-        </svg>
+      <!-- INDICADORES -->
 
-        <span class="visually-hidden" id="bd-theme-text">
-          Cambiar tema
+      <div class="carousel-indicators">
+
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Diapositiva 1"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="1"
+          aria-label="Diapositiva 2"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="2"
+          aria-label="Diapositiva 3"
+        ></button>
+
+      </div>
+
+
+      <!-- CONTENIDO DEL CARRUSEL -->
+
+      <div class="carousel-inner">
+
+
+        <!-- ================================= -->
+        <!-- PRIMER SLIDE -->
+        <!-- ================================= -->
+
+        <div class="carousel-item active">
+
+          <svg
+            aria-hidden="true"
+            class="bd-placeholder-img"
+            height="100%"
+            preserveAspectRatio="xMidYMid slice"
+            width="100%"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+
+          </svg>
+
+          <div class="container">
+
+            <div class="carousel-caption text-start">
+
+              <h1>
+                Example headline.
+              </h1>
+
+              <p class="opacity-75">
+                Some representative placeholder content
+                for the first slide of the carousel.
+              </p>
+
+              <p>
+
+                <a
+                  class="btn btn-lg btn-primary"
+                  href="#"
+                >
+                  Sign up today
+                </a>
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- SEGUNDO SLIDE -->
+        <!-- ================================= -->
+
+        <div class="carousel-item">
+
+          <svg
+            aria-hidden="true"
+            class="bd-placeholder-img"
+            height="100%"
+            preserveAspectRatio="xMidYMid slice"
+            width="100%"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+
+          </svg>
+
+          <div class="container">
+
+            <div class="carousel-caption">
+
+              <h1>
+                Another example headline.
+              </h1>
+
+              <p>
+                Some representative placeholder content
+                for the second slide of the carousel.
+              </p>
+
+              <p>
+
+                <a
+                  class="btn btn-lg btn-primary"
+                  href="#"
+                >
+                  Learn more
+                </a>
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- TERCER SLIDE - SEGUNDO CAMBIO -->
+        <!-- ================================= -->
+
+        <div class="carousel-item">
+
+          <svg
+            aria-hidden="true"
+            class="bd-placeholder-img"
+            height="100%"
+            preserveAspectRatio="xMidYMid slice"
+            width="100%"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+
+          </svg>
+
+          <div class="container">
+
+            <div class="carousel-caption text-end">
+
+              <h1>
+                FISEI
+              </h1>
+
+              <p>
+                Misión y Visión
+              </p>
+
+              <p>
+
+                <a
+                  class="btn btn-lg btn-primary"
+                  href="#"
+                >
+                  Ver más
+                </a>
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================================= -->
+      <!-- BOTÓN ANTERIOR -->
+      <!-- ================================= -->
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="prev"
+      >
+
+        <span
+          class="carousel-control-prev-icon"
+          aria-hidden="true"
+        ></span>
+
+        <span class="visually-hidden">
+          Anterior
         </span>
+
       </button>
 
-      <ul
-        class="dropdown-menu dropdown-menu-end shadow"
-        aria-labelledby="bd-theme-text"
+
+      <!-- ================================= -->
+      <!-- BOTÓN SIGUIENTE -->
+      <!-- ================================= -->
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="next"
       >
 
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center"
-            data-bs-theme-value="light"
-            aria-pressed="false"
-          >
-            Claro
-          </button>
-        </li>
+        <span
+          class="carousel-control-next-icon"
+          aria-hidden="true"
+        ></span>
 
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center"
-            data-bs-theme-value="dark"
-            aria-pressed="false"
-          >
-            Oscuro
-          </button>
-        </li>
+        <span class="visually-hidden">
+          Siguiente
+        </span>
 
-        <li>
-          <button
-            type="button"
-            class="dropdown-item d-flex align-items-center active"
-            data-bs-theme-value="auto"
-            aria-pressed="true"
-          >
-            Automático
-          </button>
-        </li>
-
-      </ul>
+      </button>
 
     </div>
 
 
-    <!-- ============================= -->
-    <!-- MENÚ PRINCIPAL -->
-    <!-- ============================= -->
+    <!-- ========================================= -->
+    <!-- TRES COLUMNAS -->
+    <!-- ========================================= -->
 
-    <header data-bs-theme="dark">
+    <div class="container marketing">
 
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-
-        <div class="container-fluid">
-
-          <!-- NOMBRE -->
-          <a class="navbar-brand" href="#">FISEI</a>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse"
-            aria-expanded="false"
-            aria-label="Mostrar navegación"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <div class="row">
 
 
-          <div
-            class="collapse navbar-collapse"
-            id="navbarCollapse"
+        <!-- COLUMNA 1 -->
+
+        <div class="col-lg-4">
+
+          <svg
+            aria-label="Placeholder"
+            class="bd-placeholder-img rounded-circle"
+            height="140"
+            preserveAspectRatio="xMidYMid slice"
+            role="img"
+            width="140"
+            xmlns="http://www.w3.org/2000/svg"
           >
 
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
 
-              <!-- INICIO -->
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="#"
-                >
-                  Inicio
-                </a>
-              </li>
+          </svg>
 
+          <h2 class="fw-normal">
+            Heading
+          </h2>
 
-              <!-- CARRERAS -->
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#"
-                >
-                  Carreras
-                </a>
-              </li>
+          <p>
+            Some representative placeholder content
+            for the three columns of text below
+            the carousel. This is the first column.
+          </p>
 
+          <p>
 
-              <!-- DOCENTES -->
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#"
-                >
-                  Docentes
-                </a>
-              </li>
-
-
-              <!-- SERVICIOS -->
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#"
-                >
-                  Servicios
-                </a>
-              </li>
-
-            </ul>
-
-
-            <!-- BUSCADOR -->
-
-            <form
-              class="d-flex"
-              role="search"
+            <a
+              class="btn btn-secondary"
+              href="#"
             >
+              View details &raquo;
+            </a>
 
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Buscar"
-                aria-label="Buscar"
-              />
-
-              <button
-                class="btn btn-outline-success"
-                type="submit"
-              >
-                Buscar
-              </button>
-
-            </form>
-
-          </div>
-
-        </div>
-
-      </nav>
-
-    </header>
-
-
-    <!-- ============================= -->
-    <!-- CARRUSEL -->
-    <!-- ============================= -->
-
-    <main>
-
-      <div
-        id="myCarousel"
-        class="carousel slide mb-6"
-        data-bs-ride="carousel"
-      >
-
-        <!-- INDICADORES -->
-
-        <div class="carousel-indicators">
-
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Diapositiva 1"
-          ></button>
-
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="1"
-            aria-label="Diapositiva 2"
-          ></button>
-
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="2"
-            aria-label="Diapositiva 3"
-          ></button>
+          </p>
 
         </div>
 
 
-        <div class="carousel-inner">
+        <!-- COLUMNA 2 -->
 
-          <!-- PRIMER SLIDE -->
+        <div class="col-lg-4">
 
-          <div class="carousel-item active">
+          <svg
+            aria-label="Placeholder"
+            class="bd-placeholder-img rounded-circle"
+            height="140"
+            preserveAspectRatio="xMidYMid slice"
+            role="img"
+            width="140"
+            xmlns="http://www.w3.org/2000/svg"
+          >
 
-            <svg
-              aria-hidden="true"
-              class="bd-placeholder-img"
-              height="100%"
-              preserveAspectRatio="xMidYMid slice"
+            <rect
               width="100%"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-
-            </svg>
-
-            <div class="container">
-
-              <div class="carousel-caption text-start">
-
-                <h1>Example headline.</h1>
-
-                <p class="opacity-75">
-                  Some representative placeholder content for the
-                  first slide of the carousel.
-                </p>
-
-                <p>
-                  <a
-                    class="btn btn-lg btn-primary"
-                    href="#"
-                  >
-                    Sign up today
-                  </a>
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <!-- SEGUNDO SLIDE -->
-
-          <div class="carousel-item">
-
-            <svg
-              aria-hidden="true"
-              class="bd-placeholder-img"
               height="100%"
-              preserveAspectRatio="xMidYMid slice"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+
+          </svg>
+
+          <h2 class="fw-normal">
+            Heading
+          </h2>
+
+          <p>
+            Another exciting bit of representative
+            placeholder content. This time,
+            we've moved on to the second column.
+          </p>
+
+          <p>
+
+            <a
+              class="btn btn-secondary"
+              href="#"
             >
+              View details &raquo;
+            </a>
 
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-
-            </svg>
-
-            <div class="container">
-
-              <div class="carousel-caption">
-
-                <h1>Another example headline.</h1>
-
-                <p>
-                  Some representative placeholder content for the
-                  second slide of the carousel.
-                </p>
-
-                <p>
-                  <a
-                    class="btn btn-lg btn-primary"
-                    href="#"
-                  >
-                    Learn more
-                  </a>
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <!-- TERCER SLIDE -->
-
-          <div class="carousel-item">
-
-            <svg
-              aria-hidden="true"
-              class="bd-placeholder-img"
-              height="100%"
-              preserveAspectRatio="xMidYMid slice"
-              width="100%"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-
-            </svg>
-
-            <div class="container">
-
-              <div class="carousel-caption text-end">
-
-                <h1>One more for good measure.</h1>
-
-                <p>
-                  Some representative placeholder content for the
-                  third slide of this carousel.
-                </p>
-
-                <p>
-                  <a
-                    class="btn btn-lg btn-primary"
-                    href="#"
-                  >
-                    Browse gallery
-                  </a>
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
+          </p>
 
         </div>
 
 
-        <!-- BOTÓN ANTERIOR -->
+        <!-- COLUMNA 3 -->
 
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="prev"
-        >
+        <div class="col-lg-4">
 
-          <span
-            class="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
+          <svg
+            aria-label="Placeholder"
+            class="bd-placeholder-img rounded-circle"
+            height="140"
+            preserveAspectRatio="xMidYMid slice"
+            role="img"
+            width="140"
+            xmlns="http://www.w3.org/2000/svg"
+          >
 
-          <span class="visually-hidden">
-            Anterior
-          </span>
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
 
-        </button>
+          </svg>
 
+          <h2 class="fw-normal">
+            Heading
+          </h2>
 
-        <!-- BOTÓN SIGUIENTE -->
+          <p>
+            And lastly this, the third column
+            of representative placeholder content.
+          </p>
 
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="next"
-        >
+          <p>
 
-          <span
-            class="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
+            <a
+              class="btn btn-secondary"
+              href="#"
+            >
+              View details &raquo;
+            </a>
 
-          <span class="visually-hidden">
-            Siguiente
-          </span>
+          </p>
 
-        </button>
+        </div>
 
       </div>
 
 
-      <!-- ============================= -->
-      <!-- CONTENIDO INFERIOR -->
-      <!-- ============================= -->
+      <!-- ========================================= -->
+      <!-- PRIMER FEATURETTE -->
+      <!-- ========================================= -->
 
-      <div class="container marketing">
+      <hr class="featurette-divider">
 
-        <div class="row">
+      <div class="row featurette">
 
-          <div class="col-lg-4">
+        <div class="col-md-7">
 
-            <svg
-              aria-label="Placeholder"
-              class="bd-placeholder-img rounded-circle"
-              height="140"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="140"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+          <h2 class="featurette-heading fw-normal lh-1">
 
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
+            First featurette heading.
 
-            </svg>
+            <span class="text-body-secondary">
+              It’ll blow your mind.
+            </span>
 
-            <h2 class="fw-normal">
-              Heading
-            </h2>
+          </h2>
 
-            <p>
-              Some representative placeholder content for the
-              three columns of text below the carousel.
-              This is the first column.
-            </p>
-
-            <p>
-              <a
-                class="btn btn-secondary"
-                href="#"
-              >
-                View details &raquo;
-              </a>
-            </p>
-
-          </div>
-
-
-          <div class="col-lg-4">
-
-            <svg
-              aria-label="Placeholder"
-              class="bd-placeholder-img rounded-circle"
-              height="140"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="140"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-
-            </svg>
-
-            <h2 class="fw-normal">
-              Heading
-            </h2>
-
-            <p>
-              Another exciting bit of representative placeholder
-              content. This time, we've moved on to the second
-              column.
-            </p>
-
-            <p>
-              <a
-                class="btn btn-secondary"
-                href="#"
-              >
-                View details &raquo;
-              </a>
-            </p>
-
-          </div>
-
-
-          <div class="col-lg-4">
-
-            <svg
-              aria-label="Placeholder"
-              class="bd-placeholder-img rounded-circle"
-              height="140"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="140"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-color)"
-              ></rect>
-
-            </svg>
-
-            <h2 class="fw-normal">
-              Heading
-            </h2>
-
-            <p>
-              And lastly this, the third column of
-              representative placeholder content.
-            </p>
-
-            <p>
-              <a
-                class="btn btn-secondary"
-                href="#"
-              >
-                View details &raquo;
-              </a>
-            </p>
-
-          </div>
+          <p class="lead">
+            Some great placeholder content for the
+            first featurette here. Imagine some
+            exciting prose here.
+          </p>
 
         </div>
 
 
-        <!-- PRIMERA SECCIÓN -->
+        <div class="col-md-5">
 
-        <hr class="featurette-divider" />
+          <svg
+            aria-label="Placeholder: 500x500"
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            height="500"
+            preserveAspectRatio="xMidYMid slice"
+            role="img"
+            width="500"
+            xmlns="http://www.w3.org/2000/svg"
+          >
 
-        <div class="row featurette">
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-bg)"
+            ></rect>
 
-          <div class="col-md-7">
-
-            <h2 class="featurette-heading fw-normal lh-1">
-              First featurette heading.
-              <span class="text-body-secondary">
-                It’ll blow your mind.
-              </span>
-            </h2>
-
-            <p class="lead">
-              Some great placeholder content for the first
-              featurette here. Imagine some exciting prose here.
-            </p>
-
-          </div>
-
-
-          <div class="col-md-5">
-
-            <svg
-              aria-label="Placeholder: 500x500"
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              height="500"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="500"
-              xmlns="http://www.w3.org/2000/svg"
+            <text
+              x="50%"
+              y="50%"
+              fill="var(--bs-secondary-color)"
+              dy=".3em"
             >
+              500x500
+            </text>
 
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-bg)"
-              ></rect>
-
-              <text
-                x="50%"
-                y="50%"
-                fill="var(--bs-secondary-color)"
-                dy=".3em"
-              >
-                500x500
-              </text>
-
-            </svg>
-
-          </div>
+          </svg>
 
         </div>
-
-
-        <!-- SEGUNDA SECCIÓN -->
-
-        <hr class="featurette-divider" />
-
-        <div class="row featurette">
-
-          <div class="col-md-7 order-md-2">
-
-            <h2 class="featurette-heading fw-normal lh-1">
-              Oh yeah, it’s that good.
-              <span class="text-body-secondary">
-                See for yourself.
-              </span>
-            </h2>
-
-            <p class="lead">
-              Another featurette? Of course. More placeholder
-              content here to give you an idea of how this
-              layout would work with some actual real-world
-              content in place.
-            </p>
-
-          </div>
-
-
-          <div class="col-md-5 order-md-1">
-
-            <svg
-              aria-label="Placeholder: 500x500"
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              height="500"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="500"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-bg)"
-              ></rect>
-
-              <text
-                x="50%"
-                y="50%"
-                fill="var(--bs-secondary-color)"
-                dy=".3em"
-              >
-                500x500
-              </text>
-
-            </svg>
-
-          </div>
-
-        </div>
-
-
-        <!-- TERCERA SECCIÓN -->
-
-        <hr class="featurette-divider" />
-
-        <div class="row featurette">
-
-          <div class="col-md-7">
-
-            <h2 class="featurette-heading fw-normal lh-1">
-              And lastly, this one.
-              <span class="text-body-secondary">
-                Checkmate.
-              </span>
-            </h2>
-
-            <p class="lead">
-              And yes, this is the last block of representative
-              placeholder content. Again, not really intended
-              to be actually read, simply here to give you a
-              better view of what this would look like with
-              some actual content.
-            </p>
-
-          </div>
-
-
-          <div class="col-md-5">
-
-            <svg
-              aria-label="Placeholder: 500x500"
-              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-              height="500"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              width="500"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <rect
-                width="100%"
-                height="100%"
-                fill="var(--bs-secondary-bg)"
-              ></rect>
-
-              <text
-                x="50%"
-                y="50%"
-                fill="var(--bs-secondary-color)"
-                dy=".3em"
-              >
-                500x500
-              </text>
-
-            </svg>
-
-          </div>
-
-        </div>
-
-        <hr class="featurette-divider" />
 
       </div>
 
 
-      <!-- PIE DE PÁGINA -->
+      <!-- ========================================= -->
+      <!-- SEGUNDO FEATURETTE -->
+      <!-- ========================================= -->
 
-      <footer class="container">
+      <hr class="featurette-divider">
 
-        <p class="float-end">
-          <a href="#">
-            Volver arriba
-          </a>
-        </p>
+      <div class="row featurette">
 
-        <p>
-          &copy; 2017–2025 FISEI
-          &middot;
-          <a href="#">Privacidad</a>
-          &middot;
-          <a href="#">Términos</a>
-        </p>
+        <div class="col-md-7 order-md-2">
 
-      </footer>
+          <h2 class="featurette-heading fw-normal lh-1">
 
-    </main>
+            Oh yeah, it’s that good.
+
+            <span class="text-body-secondary">
+              See for yourself.
+            </span>
+
+          </h2>
+
+          <p class="lead">
+            Another featurette? Of course.
+            More placeholder content here to give
+            you an idea of how this layout would work
+            with some actual real-world content in place.
+          </p>
+
+        </div>
 
 
-    <!-- BOOTSTRAP JS -->
+        <div class="col-md-5 order-md-1">
 
-    <script
-      src="../assets/dist/js/bootstrap.bundle.min.js"
-    ></script>
+          <svg
+            aria-label="Placeholder: 500x500"
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            height="500"
+            preserveAspectRatio="xMidYMid slice"
+            role="img"
+            width="500"
+            xmlns="http://www.w3.org/2000/svg"
+          >
 
-  </body>
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-bg)"
+            ></rect>
+
+            <text
+              x="50%"
+              y="50%"
+              fill="var(--bs-secondary-color)"
+              dy=".3em"
+            >
+              500x500
+            </text>
+
+          </svg>
+
+        </div>
+
+      </div>
+
+
+      <!-- ========================================= -->
+      <!-- TERCER FEATURETTE -->
+      <!-- ========================================= -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+
+        <div class="col-md-7">
+
+          <h2 class="featurette-heading fw-normal lh-1">
+
+            And lastly, this one.
+
+            <span class="text-body-secondary">
+              Checkmate.
+            </span>
+
+          </h2>
+
+          <p class="lead">
+            And yes, this is the last block of
+            representative placeholder content.
+            Again, not really intended to be actually
+            read, simply here to give you a better
+            view of what this would look like with
+            some actual content.
+          </p>
+
+        </div>
+
+
+        <div class="col-md-5">
+
+          <svg
+            aria-label="Placeholder: 500x500"
+            class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+            height="500"
+            preserveAspectRatio="xMidYMid slice"
+            role="img"
+            width="500"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-bg)"
+            ></rect>
+
+            <text
+              x="50%"
+              y="50%"
+              fill="var(--bs-secondary-color)"
+              dy=".3em"
+            >
+              500x500
+            </text>
+
+          </svg>
+
+        </div>
+
+      </div>
+
+      <hr class="featurette-divider">
+
+    </div>
+
+
+    <!-- ========================================= -->
+    <!-- PIE DE PÁGINA -->
+    <!-- ========================================= -->
+
+    <footer class="container">
+
+      <p class="float-end">
+
+        <a href="#">
+          Volver arriba
+        </a>
+
+      </p>
+
+      <p>
+        &copy; 2017–2025 FISEI
+        &middot;
+
+        <a href="#">
+          Privacidad
+        </a>
+
+        &middot;
+
+        <a href="#">
+          Términos
+        </a>
+
+      </p>
+
+    </footer>
+
+  </main>
+
+
+  <!-- ========================================= -->
+  <!-- BOOTSTRAP JAVASCRIPT -->
+  <!-- ========================================= -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+</body>
+
 </html>
