@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280" role="img" aria-labelledby="title desc">
+  <title id="title">Robotica</title>
+  <desc id="desc">Brazo robotico y circuitos que representan la carrera de robotica.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#0891b2"/>
+    </linearGradient>
+  </defs>
+  <circle cx="140" cy="140" r="140" fill="url(#bg)"/>
+  <circle cx="92" cy="198" r="22" fill="#f8fafc"/>
+  <circle cx="156" cy="142" r="20" fill="#f8fafc"/>
+  <path d="M107 183l36-31M169 130l32-28" stroke="#f8fafc" stroke-width="22" stroke-linecap="round"/>
+  <path d="M201 102l25 16M201 102l-16-25M201 102l22-22" stroke="#facc15" stroke-width="10" stroke-linecap="round"/>
+  <rect x="60" y="210" width="95" height="20" rx="10" fill="#0f172a"/>
+  <path d="M65 82h52M91 82v44M184 196h42M205 154v42" stroke="#bae6fd" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="91" cy="130" r="9" fill="#facc15"/>
+  <circle cx="205" cy="150" r="9" fill="#facc15"/>
+</svg>
