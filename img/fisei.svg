@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" role="img" aria-labelledby="title desc">
+  <title id="title">Facultad FISEI</title>
+  <desc id="desc">Edificio academico con elementos tecnologicos que representan la Facultad de Ingenieria en Sistemas, Electronica e Industrial.</desc>
+  <rect width="500" height="500" fill="#111827"/>
+  <rect x="70" y="120" width="360" height="270" rx="18" fill="#f8fafc"/>
+  <path d="M55 128L250 58l195 70" fill="#2563eb"/>
+  <rect x="105" y="165" width="64" height="72" rx="8" fill="#dbeafe"/>
+  <rect x="218" y="165" width="64" height="72" rx="8" fill="#dbeafe"/>
+  <rect x="331" y="165" width="64" height="72" rx="8" fill="#dbeafe"/>
+  <rect x="105" y="272" width="64" height="72" rx="8" fill="#dbeafe"/>
+  <rect x="218" y="272" width="64" height="118" rx="8" fill="#334155"/>
+  <rect x="331" y="272" width="64" height="72" rx="8" fill="#dbeafe"/>
+  <path d="M116 201h42M229 201h42M342 201h42M116 308h42M342 308h42" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="250" cy="103" r="32" fill="#facc15"/>
+  <text x="250" y="113" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1f2937">FISEI</text>
+  <path d="M95 418h310" stroke="#64748b" stroke-width="18" stroke-linecap="round"/>
+  <path d="M72 424c50 28 96 28 138 0s86-28 132 0 68 26 96 8" fill="none" stroke="#38bdf8" stroke-width="10" stroke-linecap="round"/>
+</svg>
